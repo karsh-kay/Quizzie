@@ -9,4 +9,9 @@
     <color name="white">#FFFFFFFF</color>
     <color name="mainCyan">#00FFFF</color>
     <color name="mainPink">#fa78bd</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="correct">#257120</color>
+    <color name="incorrect">#bb1b23</color>
+    <color name="option">#bae0dd</color>
+    <color name="question">#e1dee2</color>
 </resources>

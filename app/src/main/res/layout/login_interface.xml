@@ -50,7 +50,7 @@
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/loginTabLayout"
-            android:contentDescription="switch b                                                                                                                                                                                                                etween login/sign up pages"
+            android:contentDescription="switch between login/sign up pages"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"

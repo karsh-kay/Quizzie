@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <ProgressBar
+        android:id="@+id/determinateBar"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:progress="100"
+        android:progressTint="@color/mainPink"
+        android:progressBackgroundTint="@color/white"
+
+        android:layout_margin="2dp"
+        app:layout_constraintBottom_toTopOf="@id/container_game"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintHeight_percent="0.01" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container_game"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="20dp"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/button_next"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/determinateBar">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/question_card"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:backgroundTint="@color/question"
+            app:cardCornerRadius="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.39"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.033"
+            app:strokeColor="@color/mainPink"
+            app:strokeWidth="3dp">
+
+            <TextView
+                android:id="@+id/ques_textCard"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="@dimen/_20sdp"
+                android:padding="10dp"/>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:onClick="aClick"
+            android:id="@+id/option_a"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="40dp"
+            app:cardBackgroundColor="@color/option"
+            app:cardCornerRadius="25dp"
+            app:layout_constraintBottom_toTopOf="@id/option_b"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.08"
+            app:layout_constraintVertical_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/question_card"
+            app:strokeColor="@color/white"
+            app:strokeWidth="3dp">
+
+            <TextView
+                android:id="@+id/a_textCard"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="@dimen/_16sdp"
+                android:padding="10dp"/>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:onClick="bClick"
+            android:id="@+id/option_b"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="25dp"
+            app:layout_constraintBottom_toTopOf="@id/option_c"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.08"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/option_a"
+            app:cardBackgroundColor="@color/option"
+            app:strokeColor="@color/white"
+            app:strokeWidth="3dp">
+
+            <TextView
+                android:id="@+id/b_textCard"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sdp"
+                android:gravity="center"
+                android:padding="10dp"/>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:onClick="cClick"
+            android:id="@+id/option_c"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="@color/option"
+            app:cardCornerRadius="25dp"
+            app:layout_constraintBottom_toTopOf="@id/option_d"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.08"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/option_b"
+            app:strokeColor="@color/white"
+            app:strokeWidth="3dp">
+
+            <TextView
+                android:id="@+id/c_textCard"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sdp"
+                android:gravity="center"
+                android:padding="10dp"/>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:onClick="dClick"
+            android:id="@+id/option_d"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="@color/option"
+            app:cardCornerRadius="25dp"
+            app:layout_constraintBottom_toTopOf="@id/option_e"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.08"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/option_c"
+            app:strokeColor="@color/white"
+            app:strokeWidth="3dp">
+
+            <TextView
+                android:id="@+id/d_textCard"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sdp"
+                android:gravity="center"
+                android:padding="10dp"/>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:onClick="eClick"
+            android:id="@+id/option_e"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="@color/option"
+            app:cardCornerRadius="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.08"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/option_d"
+            app:strokeColor="@color/white"
+            app:strokeWidth="3dp">
+
+            <TextView
+                android:id="@+id/e_textCard"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sdp"
+                android:gravity="center"
+                android:padding="10dp"/>
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/button_next"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/next"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/container_game"
+        app:layout_constraintVertical_bias="1"
+        app:layout_constraintWidth_percent=".6"
+        tools:ignore="TextContrastCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

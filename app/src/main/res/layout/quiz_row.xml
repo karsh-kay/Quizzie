@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/view_dash"
+    android:layout_marginBottom="7dp"
+    android:padding="3dp">
+
+    <TextView
+        android:id="@+id/quiz_row_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Algorithms for the class variable"
+        android:paddingHorizontal="20dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintHorizontal_bias="0" />
+
+    <TextView
+        android:id="@+id/quiz_row_due"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Due: 15/5/22"
+        android:paddingHorizontal="20dp"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quiz_row_title"
+        tools:ignore="HardcodedText"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintHorizontal_bias="0"/>
+
+    <TextView
+        android:id="@+id/quiz_row_class"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Class of Data Science"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:paddingHorizontal="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quiz_row_due"
+        tools:ignore="HardcodedText"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintHorizontal_bias="0"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

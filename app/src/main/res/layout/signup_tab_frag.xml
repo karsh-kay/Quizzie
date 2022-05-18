@@ -18,25 +18,28 @@
         app:layout_constraintWidth_percent=".8"
         app:singleSelection="true"
         app:selectionRequired="true"
-        app:checkedButton="@+id/btnStudent">
+        app:checkedButton="@+id/btn_student">
 
         <!-- Flag here app:strokeColor="@color/mainCyan", app:strokeWidth="2dp", android:textColor="@color/mainCyan"  -->
 
         <Button
-            android:id="@+id/btnStudent"
+            android:id="@+id/btn_student"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Student"
+            android:textSize="@dimen/_10sdp"
             android:textStyle="bold"
             app:cornerRadius="20dp"
-            app:icon="@drawable/ic_student" />
+            app:icon="@drawable/ic_student"
+            tools:ignore="TextContrastCheck" />
 
         <Button
-            android:id="@+id/btnTeacher"
+            android:id="@+id/btn_teacher"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
             android:layout_width="0dp"
+            android:textSize="@dimen/_10sdp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Teacher"
@@ -47,7 +50,7 @@
     </com.google.android.material.button.MaterialButtonToggleGroup>
 
     <!--    Flag here   input type    -->
-    <EditText
+    <AutoCompleteTextView
         android:id="@+id/signup_email"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -88,7 +91,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signup_email"
         app:layout_constraintVertical_bias="0"
-        app:layout_constraintWidth_percent=".8" />
+        app:layout_constraintWidth_percent=".8"
+        tools:ignore="TextContrastCheck" />
 
     <EditText
         android:id="@+id/signup_pass_check"
@@ -113,7 +117,7 @@
         tools:ignore="TextContrastCheck" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/signup_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/bg_button"

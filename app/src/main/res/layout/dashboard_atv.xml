@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_dash"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:openDrawer="start">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/top_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="7dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent=".23"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0">
+
+            <ImageView
+                android:id="@+id/profile_pic"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="10dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/view_profile"
+                android:contentDescription="Logout"
+                android:padding="5dp"
+                android:src="@drawable/ic_baseline_person"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.8"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText,ImageContrastCheck" />
+
+            <ImageView
+                android:id="@+id/create_new"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:adjustViewBounds="true"
+                android:background="@color/transparent"
+                android:contentDescription="Logout"
+                android:src="@drawable/ic_baseline_add_circle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/menu_open"
+                app:layout_constraintHeight_percent="0.3"
+                app:layout_constraintStart_toEndOf="@+id/profile_pic"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.15"
+                app:layout_constraintHorizontal_bias="0.5"
+                tools:ignore="HardcodedText,ImageContrastCheck" />
+
+            <ImageView
+                android:id="@+id/menu_open"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:adjustViewBounds="true"
+                android:background="@color/transparent"
+                android:contentDescription="Logout"
+                android:src="@drawable/ic_baseline_menu"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/logout_button"
+                app:layout_constraintHeight_percent="0.3"
+                app:layout_constraintStart_toEndOf="@+id/profile_pic"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.15"
+                app:layout_constraintHorizontal_bias="0.9"
+                tools:ignore="HardcodedText,ImageContrastCheck" />
+
+            <ImageView
+                android:id="@+id/logout_button"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:background="@color/transparent"
+                android:contentDescription="Logout"
+                android:src="@drawable/ic_baseline_logout"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.3"
+                app:layout_constraintHorizontal_bias="1"
+                app:layout_constraintStart_toEndOf="@+id/profile_pic"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.15"
+                tools:ignore="HardcodedText,ImageContrastCheck" />
+
+            <TextView
+                android:id="@+id/name_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="My name here"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/profile_pic"
+                app:layout_constraintTop_toBottomOf="@+id/menu_open"
+                tools:ignore="HardcodedText,TextContrastCheck" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/switch_list"
+            android:contentDescription="switch between different quiz pages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/top_layout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_bias="0"
+            android:layout_margin="7dp"
+            app:tabUnboundedRipple="true"
+            app:tabPaddingTop="20dp"
+            app:tabPaddingBottom="20dp"
+            app:tabTextAppearance="@style/tabText"
+            app:tabBackground="?attr/selectableItemBackground"
+            app:tabIndicatorHeight="2dp"
+            app:tabIndicatorFullWidth="false"
+            android:background="@drawable/view_dash"
+            tools:ignore="HardcodedText" />
+
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/scroll_layout_pager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="7dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.69"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/switch_list"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/menu_dashboard"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:headerLayout="@layout/sidemenu_dash"
+        app:menu="@menu/menu_dash"
+        android:layout_gravity="start"/>
+</androidx.drawerlayout.widget.DrawerLayout>
+
+
